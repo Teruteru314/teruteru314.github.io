@@ -18,6 +18,22 @@
       top: 1rem;
     }
   </style>
+  <style>
+/* Fix para iconos del CDN */
+.lightbox .lb-prev, .lightbox .lb-next, .lightbox .lb-close {
+  background-image: none !important;
+}
+
+.lb-nav a.lb-prev {
+  background: url('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/images/prev.png') left 48% no-repeat;
+}
+.lb-nav a.lb-next {
+  background: url('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/images/next.png') right 48% no-repeat;
+}
+.lb-data .lb-close {
+  background: url('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/images/close.png') top right no-repeat;
+}
+</style>
 </head>
 <body class="bg-light">
 
