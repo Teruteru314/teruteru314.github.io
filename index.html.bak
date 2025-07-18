@@ -25,17 +25,7 @@ BEWARE: This model has 600+ parts, and is so damn complicated that the normal SW
     </div>
   </div>
 </div>
-<!-- PROJECT: curtatipo1 -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/img/CurtaTipo1/CompleteGroup.JPG" class="card-img-top" alt="Curta Model 1">
-          <div class="card-body">
-            <h5 class="card-title">Curta Type 1</h5>
-            <p class="card-text">Detailed 3D reconstruction based on the original factory blueprints.</p>
-            <a href="models/curtatipo1.html" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-      </div>
+
 
 <!-- PROJECT: astrats22 -->
 <div class="col">
