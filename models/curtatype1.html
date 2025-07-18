@@ -113,23 +113,29 @@ You can get blueprints and instructions in:</p>
     var images = ['complete group.jpg','carriage01.jpg','carriage02.jpg','carriage03.jpg','curta01.jpg','curta02.jpg','curta03.jpg','curta04.jpg','curta05.jpg','curta06.jpg','curta07.jpg','curta08.jpg','curta09.jpg','curta10.jpg','curta11.jpg'];
     var currentIndex = 0;
     var imageWebPath = '../assets/img/curtatype1/';
+    var modalInstance = null;
     function showImageModal(imgFile) {
       currentIndex = images.indexOf(imgFile);
       document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
-      var modal = new bootstrap.Modal(document.getElementById('imageModal'));
-      modal.show();
+      modalInstance = new bootstrap.Modal(document.getElementById('imageModal'));
+      modalInstance.show();
     }
-    document.addEventListener('keydown', function(e) {
-      var modalEl = document.getElementById('imageModal');
-      var isShown = modalEl.classList.contains('show');
-      if (!isShown) return;
-      if (e.key === 'ArrowLeft') {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
-      } else if (e.key === 'ArrowRight') {
-        currentIndex = (currentIndex + 1) % images.length;
-        document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
+    var keyListener = function(e) {
+      if (document.getElementById('imageModal').classList.contains('show')) {
+        if (e.key === 'ArrowLeft') {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
+        } else if (e.key === 'ArrowRight') {
+          currentIndex = (currentIndex + 1) % images.length;
+          document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
+        }
       }
+    };
+    document.getElementById('imageModal').addEventListener('shown.bs.modal', function () {
+      document.addEventListener('keydown', keyListener);
+    });
+    document.getElementById('imageModal').addEventListener('hidden.bs.modal', function () {
+      document.removeEventListener('keydown', keyListener);
     });
   </script>
   <footer class="text-center py-4 text-muted">

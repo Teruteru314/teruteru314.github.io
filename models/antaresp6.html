@@ -110,23 +110,29 @@ BEWARE: This model has 600+ parts, and is so damn complicated that the normal SW
     var images = ['antares main.jpg','antares 1.jpg','antares 2.jpg','antares 3.jpg','bottom.jpg','carriage 1.jpg','carriage 2.jpg','carriage 3.jpg','carriage 4.jpg','carriage 5.jpg','carriage 6.jpg','drum01.jpg','drum02.jpg','operand group.jpg','upper plate assy.jpg'];
     var currentIndex = 0;
     var imageWebPath = '../assets/img/antaresp6/';
+    var modalInstance = null;
     function showImageModal(imgFile) {
       currentIndex = images.indexOf(imgFile);
       document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
-      var modal = new bootstrap.Modal(document.getElementById('imageModal'));
-      modal.show();
+      modalInstance = new bootstrap.Modal(document.getElementById('imageModal'));
+      modalInstance.show();
     }
-    document.addEventListener('keydown', function(e) {
-      var modalEl = document.getElementById('imageModal');
-      var isShown = modalEl.classList.contains('show');
-      if (!isShown) return;
-      if (e.key === 'ArrowLeft') {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
-      } else if (e.key === 'ArrowRight') {
-        currentIndex = (currentIndex + 1) % images.length;
-        document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
+    var keyListener = function(e) {
+      if (document.getElementById('imageModal').classList.contains('show')) {
+        if (e.key === 'ArrowLeft') {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
+        } else if (e.key === 'ArrowRight') {
+          currentIndex = (currentIndex + 1) % images.length;
+          document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
+        }
       }
+    };
+    document.getElementById('imageModal').addEventListener('shown.bs.modal', function () {
+      document.addEventListener('keydown', keyListener);
+    });
+    document.getElementById('imageModal').addEventListener('hidden.bs.modal', function () {
+      document.removeEventListener('keydown', keyListener);
     });
   </script>
   <footer class="text-center py-4 text-muted">
