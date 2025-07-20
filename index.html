@@ -9,9 +9,22 @@
 <body class="bg-light">
   <div class="container py-5">
     <h1 class="mb-4 text-center">CAD Model Portfolio of Teruteru</h1>
+<div class="mb-4">
+  <label for="projectList" class="form-label">Jump to project:</label>
+  <select id="projectList" class="form-select" onchange="jumpToProject(this.value)">
+    <option value="">Select a project...</option>
+    <option value="project-astrats22">Astra TS-22</option>
+    <option value="project-beretta950b">Beretta 950B Minx</option>
+    <option value="project-bersa380cc">Bersa Thunder 380 CC</option>
+    <option value="project-sti2011">STI 2011</option>
+    <option value="project-antaresp6">Antares P6</option>
+    <option value="project-curtatype1">Curta Type 1</option>
+  </select>
+</div>
+
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 <!-- PROJECT: astrats22 -->
-<div class="col">
+<div class="col" id="project-astrats22">
   <div class="card h-100 shadow-sm">
     <img src="assets/img/astrats22/render1.jpg" class="card-img-top" alt="Astra TS-22">
     <div class="card-body">
@@ -24,7 +37,7 @@ See http://historiadelasarmasdefuego.blogspot.com.uy/2009/05/pistola-astra-mod-t
 </div>
 
 <!-- PROJECT: beretta950b -->
-<div class="col">
+<div class="col" id="project-beretta950b">
   <div class="card h-100 shadow-sm">
     <img src="assets/img/beretta950b/render1.jpg" class="card-img-top" alt="Beretta 950B Minx">
     <div class="card-body">
@@ -37,8 +50,20 @@ It was also chambered in .25 ACP caliber; in that case it was named &quot;Jetfir
   </div>
 </div>
 
+<!-- PROJECT: bersa380cc -->
+<div class="col" id="project-bersa380cc">
+  <div class="card h-100 shadow-sm">
+    <img src="assets/img/bersa380cc/render5.jpg" class="card-img-top" alt="Bersa Thunder 380 CC">
+    <div class="card-body">
+      <h5 class="card-title">Bersa Thunder 380 CC</h5>
+      <p class="card-text">Bersa Thunder .380 CC (2011), one of the best concealed carry pistols nowadays.</p>
+      <a href="models/bersa380cc.html" class="btn btn-primary">View Project</a>
+    </div>
+  </div>
+</div>
+
 <!-- PROJECT: sti2011 -->
-<div class="col">
+<div class="col" id="project-sti2011">
   <div class="card h-100 shadow-sm">
     <img src="assets/img/sti2011/render3.jpg" class="card-img-top" alt="STI 2011">
     <div class="card-body">
@@ -48,8 +73,9 @@ It was also chambered in .25 ACP caliber; in that case it was named &quot;Jetfir
     </div>
   </div>
 </div>
+
 <!-- PROJECT: antaresp6 -->
-<div class="col">
+<div class="col" id="project-antaresp6">
   <div class="card h-100 shadow-sm">
     <img src="assets/img/antaresp6/antares main.jpg" class="card-img-top" alt="Antares P6">
     <div class="card-body">
@@ -62,7 +88,7 @@ BEWARE: This model has 600+ parts, and is so damn complicated that the normal SW
 </div>
 
 <!-- PROJECT: curtatype1 -->
-<div class="col">
+<div class="col" id="project-curtatype1">
   <div class="card h-100 shadow-sm">
     <img src="assets/img/curtatype1/complete group.jpg" class="card-img-top" alt="Curta Type 1">
     <div class="card-body">
@@ -77,22 +103,21 @@ You can get blueprints and instructions in:</p>
   </div>
 </div>
 
-<!-- PROJECT: bersa380cc -->
-<div class="col">
-  <div class="card h-100 shadow-sm">
-    <img src="assets/img/bersa380cc/render5.jpg" class="card-img-top" alt="Bersa Thunder 380 CC">
-    <div class="card-body">
-      <h5 class="card-title">Bersa Thunder 380 CC</h5>
-      <p class="card-text">Bersa Thunder .380 CC (2011), one of the best concealed carry pistols nowadays.</p>
-      <a href="models/bersa380cc.html" class="btn btn-primary">View Project</a>
-    </div>
-  </div>
-</div>
 <!-- END-OF-PROJECTS -->
     </div>
   </div>
   <footer class="text-center py-4 text-muted">
-    &copy; 2025 teruteru314
+    &copy; 2025 teruteru314@hotmail.com
   </footer>
 </body>
 </html>
+<script>
+  function jumpToProject(projectId) {
+    if (projectId) {
+      const element = document.getElementById(projectId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+</script>
