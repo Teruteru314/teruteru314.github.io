@@ -10,9 +10,25 @@
 </head>
 <body class="bg-light">
   <div class="container py-5">
-    <h1 class="mb-4 text-center">CAD Model Portfolio of Teruteru</h1>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-<!-- PROJECT: antaresp6 -->
+    <h1 class="mb-4 text-center">CAD Model Portfolio of Teruteru</h1><div class="mb-4">
+  <label for="projectList" class="form-label">Jump to project:</label>
+  <select id="projectList" class="form-select" onchange="jumpToProject(this.value)">
+    <option value="">Select a project...</option>
+    <option value="project-antaresp6">Antares P6</option>
+    <option value="project-astrats22">Astra TS-22</option>
+    <option value="project-beretta950b">Beretta 950B Minx</option>
+    <option value="project-bersa380cc">Bersa Thunder 380 CC</option>
+    <option value="project-browningm1919a4">Browning M1919-A4</option>
+    <option value="project-curtatype1">Curta Type 1</option>
+    <option value="project-m1911a1">Colt 1911-A1</option>
+    <option value="project-sti2011">STI 2011</option>
+  </select>
+</div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">    </div>  <footer class="text-center py-4 text-muted">
+    &copy; 2025 teruteru314@hotmail.com
+  </footer>
+</body>
+</html><!-- PROJECT: antaresp6 -->
 <div class="col" id="project-antaresp6">
   <div class="card h-100 shadow-sm">
     <img src="assets/img/antaresp6/antares main.jpg" class="card-img-top" alt="Antares P6">
@@ -114,21 +130,3 @@ All parts detailed with corresponding part#</p>
     </div>
   </div>
 </div>
-<!-- END-OF-PROJECTS -->
-    </div>
-  </div>
-  <footer class="text-center py-4 text-muted">
-    &copy; 2025 teruteru314@hotmail.com
-  </footer>
-</body>
-</html>
-<script>
-  function jumpToProject(projectId) {
-    if (projectId) {
-      const element = document.getElementById(projectId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }
-</script>
