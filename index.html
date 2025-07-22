@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,7 +16,8 @@
 </head>
 <body class="bg-light">
   <div class="container py-5">
-    <h1 class="mb-4 text-center">CAD Model Portfolio of Teruteru</h1><div class="mb-4">
+    <h1 class="mb-4 text-center">CAD Model Portfolio of Teruteru</h1>
+<div class="mb-4">
   <label for="projectList" class="form-label">Jump to project:</label>
   <select id="projectList" class="form-select" onchange="jumpToProject(this.value)">
     <option value="">Select a project...</option>
@@ -30,11 +31,9 @@
     <option value="project-sti2011">STI 2011</option>
   </select>
 </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">    </div>  <footer class="text-center py-4 text-muted">
-    &copy; 2025 teruteru314@hotmail.com
-  </footer>
-</body>
-</html><!-- PROJECT: antaresp6 -->
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+<!-- PROJECT: antaresp6 -->
 <div class="col" id="project-antaresp6">
   <div class="card h-100 shadow-sm">
     <img src="assets/img/antaresp6/antares main.jpg" class="card-img-top project-img" alt="Antares P6">
@@ -46,6 +45,7 @@ BEWARE: This model has 600+ parts, and is so damn complicated that the normal SW
     </div>
   </div>
 </div>
+
 <!-- PROJECT: astrats22 -->
 <div class="col" id="project-astrats22">
   <div class="card h-100 shadow-sm">
@@ -58,6 +58,7 @@ See http://historiadelasarmasdefuego.blogspot.com.uy/2009/05/pistola-astra-mod-t
     </div>
   </div>
 </div>
+
 <!-- PROJECT: beretta950b -->
 <div class="col" id="project-beretta950b">
   <div class="card h-100 shadow-sm">
@@ -71,6 +72,7 @@ It was also chambered in .25 ACP caliber; in that case it was named &quot;Jetfir
     </div>
   </div>
 </div>
+
 <!-- PROJECT: bersa380cc -->
 <div class="col" id="project-bersa380cc">
   <div class="card h-100 shadow-sm">
@@ -82,6 +84,7 @@ It was also chambered in .25 ACP caliber; in that case it was named &quot;Jetfir
     </div>
   </div>
 </div>
+
 <!-- PROJECT: browningm1919a4 -->
 <div class="col" id="project-browningm1919a4">
   <div class="card h-100 shadow-sm">
@@ -98,6 +101,7 @@ This is a correction, completion and assembly of all parts, based on original bl
     </div>
   </div>
 </div>
+
 <!-- PROJECT: curtatype1 -->
 <div class="col" id="project-curtatype1">
   <div class="card h-100 shadow-sm">
@@ -113,6 +117,7 @@ You can get blueprints and instructions in:</p>
     </div>
   </div>
 </div>
+
 <!-- PROJECT: m1911a1 -->
 <div class="col" id="project-m1911a1">
   <div class="card h-100 shadow-sm">
@@ -125,6 +130,7 @@ All parts detailed with corresponding part#</p>
     </div>
   </div>
 </div>
+
 <!-- PROJECT: sti2011 -->
 <div class="col" id="project-sti2011">
   <div class="card h-100 shadow-sm">
@@ -136,3 +142,31 @@ All parts detailed with corresponding part#</p>
     </div>
   </div>
 </div>
+
+    </div>
+<!-- END-OF-PROJECTS -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <img id="modalImage" src="" class="w-100" style="max-height:80vh;object-fit:contain;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function jumpToProject(projectId) {
+    if (projectId) {
+      const element = document.getElementById(projectId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+</script>
+  <footer class="text-center py-4 text-muted">
+    &copy; 2025 teruteru314@hotmail.com
+  </footer>
+</body>
+</html>
