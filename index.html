@@ -29,6 +29,9 @@
     <option value="project-sti2011">STI 2011</option>
     <option value="project-antaresp6">Antares P6</option>
     <option value="project-curtatype1">Curta Type 1</option>
+    <option value="project-eta6497">ETA-6497-1 Watch Movement</option>
+    <option value="project-huntsmansak">Victorinox Huntsman SAK</option>
+    <option value="project-magnum">Magnum Pocketknife</option>
   </select>
 </div>
 
@@ -143,6 +146,44 @@ You can get blueprints and instructions in:</p>
   </div>
 </div>
 
+<!-- PROJECT: eta6497 -->
+<div class="col" id="project-eta6497">
+  <div class="card h-100 shadow-sm">
+    <img src="assets/img/eta6497/render3.jpg" class="card-img-top project-img" alt="ETA-6497-1 Watch Movement">
+    <div class="card-body">
+      <h5 class="card-title">ETA-6497-1 Watch Movement</h5>
+      <p class="card-text">Based on the model from Stern Winther, this is a complete solidworks rework from scratch. Every single part was rebuilt, no file conversions done.
+See: http://www.eta.ch/swisslab/6497/6947.html
+and http://www.ofrei.com/page1267.html</p>
+      <a href="models/eta6497.html" class="btn btn-primary">View Project</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT: huntsmansak -->
+<div class="col" id="project-huntsmansak">
+  <div class="card h-100 shadow-sm">
+    <img src="assets/img/huntsmansak/render1.jpg" class="card-img-top project-img" alt="Victorinox Huntsman SAK">
+    <div class="card-body">
+      <h5 class="card-title">Victorinox Huntsman SAK</h5>
+      <p class="card-text">SAK Kit (Victorinox Swiss Army Knife) model 5042 Huntsman, from 1992,. Includes the Maglite Solitarire torch and a Recta ruler-compass-thermometer.</p>
+      <a href="models/huntsmansak.html" class="btn btn-primary">View Project</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT: magnum -->
+<div class="col" id="project-magnum">
+  <div class="card h-100 shadow-sm">
+    <img src="assets/img/magnum/render1.jpg" class="card-img-top project-img" alt="Magnum Pocketknife">
+    <div class="card-body">
+      <h5 class="card-title">Magnum Pocketknife</h5>
+      <p class="card-text">Quite old colectible Magnum (Boker) Pocket Knife, from middle 80s</p>
+      <a href="models/magnum.html" class="btn btn-primary">View Project</a>
+    </div>
+  </div>
+</div>
+
     </div>
 <!-- END-OF-PROJECTS -->
   <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
@@ -170,3 +211,13 @@ You can get blueprints and instructions in:</p>
   </footer>
 </body>
 </html>
+<script>
+  function jumpToProject(projectId) {
+    if (projectId) {
+      const element = document.getElementById(projectId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+</script>
