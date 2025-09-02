@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>teruteru314 – CAD Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .project-img {
+      max-height: 200px;
+      object-fit: contain;
+    }
+  </style>
+  <script data-goatcounter="https://teruteru314.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <h1 class="mb-4 text-center">CAD Model Portfolio of Teruteru</h1>
+    <h1 class="mb-4 text-center">Thompson M1928A1</h1>
+    <h4 class="mb-4 text-muted text-center">Thompson .45ACP M1928A1 SMG</h4>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card mb-4 shadow-sm">
+          <img src="../assets/img/Thompson45/image1.jpg" class="card-img-top project-img" alt="Thompson M1928A1" style="cursor:pointer;" onclick="showImageModal('image1.jpg')">
+          <div class="card-body">
+            <p class="card-text">Thompson .45 ACP cal., model M1928A1 Sub Machine Gun, includes 20, 30 and 50 rds magazines, and original factory blueprints.</p>
+            <a href="../assets/files/Thompson45/thompson m1928a1.zip" class="btn btn-primary" download>Download ZIP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-2 text-center text-secondary">Cycle thru images with Right and Left keys.</div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image10.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image10.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image11.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image11.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image12.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image12.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image13.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image13.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image14.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image14.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image15.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image15.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image2.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image2.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image3.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image3.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image4.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image4.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image5.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image5.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image6.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image6.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image7.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image7.jpg')">
+  </div>
+</div>
+<div class="col">
+  <div class="card h-100 shadow-sm">
+          <img src="../assets/img/Thompson45/image9.jpg" class="card-img-top project-img" alt="Gallery image" style="cursor:pointer;" onclick="showImageModal('image9.jpg')">
+  </div>
+</div>
+    </div>
+    <p class="mt-4 text-center"><a href="../index.html">← Back to portfolio</a></p>
+  </div>
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <img id="modalImage" src="" class="w-100" style="max-height:80vh;object-fit:contain;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    var images = ['image1.jpg','image10.jpg','image11.jpg','image12.jpg','image13.jpg','image14.jpg','image15.jpg','image2.jpg','image3.jpg','image4.jpg','image5.jpg','image6.jpg','image7.jpg','image9.jpg'];
+    var currentIndex = 0;
+    var imageWebPath = '../assets/img/Thompson45/';
+    var modalInstance = null;
+    function showImageModal(imgFile) {
+      currentIndex = images.indexOf(imgFile);
+      document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
+      modalInstance = new bootstrap.Modal(document.getElementById('imageModal'));
+      modalInstance.show();
+    }
+    var keyListener = function(e) {
+      if (document.getElementById('imageModal').classList.contains('show')) {
+        if (e.key === 'ArrowLeft') {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
+        } else if (e.key === 'ArrowRight') {
+          currentIndex = (currentIndex + 1) % images.length;
+          document.getElementById('modalImage').src = imageWebPath + images[currentIndex];
+        }
+      }
+    };
+    document.getElementById('imageModal').addEventListener('shown.bs.modal', function () {
+      document.addEventListener('keydown', keyListener);
+    });
+    document.getElementById('imageModal').addEventListener('hidden.bs.modal', function () {
+      document.removeEventListener('keydown', keyListener);
+    });
+</script>
+  <footer class="text-center py-4 text-muted">
+    &copy; 2025 teruteru314@hotmail.com
+  </footer>
+</body>
+</html>
